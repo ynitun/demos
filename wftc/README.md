@@ -1,7 +1,7 @@
 # Weather Forecast & Traffic Cam Website  Frontend Template
 ## Prerequisites
 
-- NodeJS v16 or above must be installed
+- NodeJS v18 or above must be installed
 - eslint and prettier plugins to be installed in your corresponding IDE for code formatting.
   - For VSCode:
     - eslint

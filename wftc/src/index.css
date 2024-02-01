@@ -70,11 +70,16 @@ form label {
 .image {
   display: flex;
   width: 62%;
-  height: 200px;
+  height: 100%;
+  min-height: 130px;
   float: left;
   border: 1px solid gray;
   margin-left: 2%;
   margin-top: 2%;
+}
+
+img {
+  width: 200px;
 }
 
 textarea {
