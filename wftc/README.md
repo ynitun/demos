@@ -8,8 +8,8 @@
     - prettier
 
 ## Sourcecode 
-- git clone from https://github.com/ynitun/demos/tree/wftc
-- checkout wftc branch
+- git clone from https://github.com/ynitun/demos
+
 
 ## Quickstart Frontend
 
