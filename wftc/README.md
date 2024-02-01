@@ -7,6 +7,10 @@
     - eslint
     - prettier
 
+## Sourcecode 
+- git clone from https://github.com/ynitun/demos/tree/wftc
+- checkout wftc branch
+
 ## Quickstart Frontend
 
 1. Run `npm install`
@@ -39,4 +43,10 @@ For the app take them into account, you need to run `npm run dev` at least once 
 
 Runs a script to prepare create environment configs and start the app in development mode
 
-## Environment Variables
+## Endpoints to try out in postman
+
+WFTC-API.postman_collection.json is included to provide postman information 
+
+## Things that haven't been covered
+
+I haven't covered the unit test.
