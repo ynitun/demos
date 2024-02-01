@@ -13,23 +13,25 @@
 
 ## Quickstart Frontend
 
-1. Run `npm install`
-2. Run `npm start-dev`
-3. Go to `http://localhost:5173/`
+1. Run `cd wftc`
+3. Run `npm install`
+3. Run `npm start-dev`
+4. Go to `http://localhost:5173/`
 
 
 ## Quickstart Backend
 
-1. Run `npm install`
-2. Run `docker compose up wftc -d`
-3. Run 'npm i -g prisma'
-4. Run `prisma generate`
-5. Run `npm run dev`
+1. Run `cd wftc-api`
+2. Run `npm install`
+3. Run `docker compose up wftc -d`
+4. Run 'npm i -g prisma'
+5. Run `prisma generate`
+6. Run `npm run dev`
 
-## 
+## Techstack 
 
 
-ReactJS, Typescript, NestJs
+ReactJS, Typescript, NestJs, postgres
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app)
 
