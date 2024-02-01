@@ -1,0 +1,127 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+h3 {
+  display: flex;
+  float: left;
+  margin-left: 2%;
+  margin-top: 2%;
+  width:100%;
+}
+
+.container{
+  display: flex-start;
+  width: 100%;
+  align-items: center; 
+}
+
+form{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+  margin-top: 5px;
+  padding: 6px 15px;
+  background-color: rgba(247, 247,247, 0.9);
+  box-shadow: rgba(0,0,0,0.9) 0px 8px 24px;
+  border-radius: 10px;
+}
+
+form label{
+  font-size: .8rem;
+  padding-bottom:  2px;
+  font-weight: bold;
+}
+
+.datetime{
+  display: flex;
+  flex-direction: column;
+  float: left;
+  margin-left: 2%;
+  margin-top: 2%;
+  width: 30%;
+}
+
+.locations{
+  display: flex;
+  float: left;
+  margin-left: 2%;
+  margin-top: 2%;
+  width:63.5%;
+}
+
+.weather{
+  display: flex;
+  float: left;
+  margin-left: 2%;
+  margin-top: 2%;
+  width:13%;
+}
+
+
+.image{
+  display: flex;
+  width: 62%;
+  height: 100%;
+  min-height: 130px;
+  float: left;
+  border: 1px solid gray;
+  margin-left: 2%;
+  margin-top: 2%;
+}
+
+img{
+  width: 200px;
+}
+
+textarea{
+  height: 130px;
+  width: 100%;
+  margin-right: 2%;
+}
+
+select{
+  height: 135px;
+  width: 100%;
+  margin-right: 2%;
+}
+
+@media screen and (max-width: 1366px) {
+    body p{
+      font-size: 30px;
+    }
+  }
+  
+@media screen and (max-width: 1024px) {
+  body p{
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body p{
+    font-size: 10px;
+  }
+}
+
+@media screen and (max-width: 748px) {
+  body p{
+    font-size: 8px;
+  }
+  .weather{
+    display: flex;
+    float: left;
+    margin-left: 2%;
+    margin-top: 2%;
+    width:63.5%;
+  }
+}
