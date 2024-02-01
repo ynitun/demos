@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import axios from "axios";
-import { FC, useState } from "react";
+import { FC, useState, useEffect } from "react";
 
 // Interface for the data returned by the server.
 interface AppProps {
@@ -44,10 +44,37 @@ const App: FC<AppProps> = ({ title }) => {
 
   const [inputValues, setInputValues] = useState<{ [x: string]: string }>();
 
+  const [textValue1, setTextValue1] = useState<string>("");
+  const [textValue2, setTextValue2] = useState<string>("");
+
+  useEffect(() => {
+    const cachedValue1 = localStorage.getItem("textboxValue1");
+    if (cachedValue1) {
+      setTextValue1(cachedValue1);
+    }
+
+    const cachedValue2 = localStorage.getItem("textboxValue2");
+    if (cachedValue2) {
+      setTextValue2(cachedValue2);
+    }
+  }, []);
+
   // DateTime input handlers for DatePicker component
   const handleInputChange = (e: React.FormEvent<HTMLInputElement>) => {
     const { name, value } = e.currentTarget;
     setInputValues((prevState) => ({ ...prevState, [name]: value }));
+
+    // Cache the value to localStorage on every change
+    if (e.currentTarget.name == "date") {
+      const newValue1 = e.currentTarget.value;
+      setTextValue1(newValue1);
+      localStorage.setItem("textboxValue1", newValue1);
+    }
+    if (e.currentTarget.name == "time") {
+      const newValue2 = e.currentTarget.value;
+      setTextValue2(newValue2);
+      localStorage.setItem("textboxValue2", newValue2);
+    }
   };
 
   const handleInputSelect = async (e: React.FormEvent<HTMLInputElement>) => {
@@ -136,7 +163,10 @@ const App: FC<AppProps> = ({ title }) => {
     };
 
     try {
-      const response = await axios.post("http://localhost:3000/api/", data);
+      const response = await axios.post(
+        "http://localhost:3000/api/create",
+        data
+      );
       console.log(response.data);
     } catch (error) {
       console.log(error);
@@ -208,6 +238,7 @@ const App: FC<AppProps> = ({ title }) => {
             <input
               name="date"
               type="date"
+              value={textValue1}
               onChange={handleInputChange}
               onSelect={handleInputSelect}
             />
@@ -217,6 +248,7 @@ const App: FC<AppProps> = ({ title }) => {
             <input
               name="time"
               type="time"
+              value={textValue2}
               onChange={handleInputChange}
               onSelect={handleInputSelect}
             />

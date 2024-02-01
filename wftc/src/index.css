@@ -15,34 +15,34 @@ h3 {
   float: left;
   margin-left: 2%;
   margin-top: 2%;
-  width: 100%;
+  width:100%;
 }
 
-.container {
+.container{
   display: flex-start;
   width: 100%;
-  align-items: center;
+  align-items: center; 
 }
 
-form {
+form{
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin: auto;
   margin-top: 5px;
   padding: 6px 15px;
-  background-color: rgba(247, 247, 247, 0.9);
-  box-shadow: rgba(0, 0, 0, 0.9) 0px 8px 24px;
+  background-color: rgba(247, 247,247, 0.9);
+  box-shadow: rgba(0,0,0,0.9) 0px 8px 24px;
   border-radius: 10px;
 }
 
-form label {
-  font-size: 0.8rem;
-  padding-bottom: 2px;
+form label{
+  font-size: .8rem;
+  padding-bottom:  2px;
   font-weight: bold;
 }
 
-.datetime {
+.datetime{
   display: flex;
   flex-direction: column;
   float: left;
@@ -51,23 +51,24 @@ form label {
   width: 30%;
 }
 
-.locations {
+.locations{
   display: flex;
   float: left;
   margin-left: 2%;
   margin-top: 2%;
-  width: 63.5%;
+  width:63.5%;
 }
 
-.weather {
+.weather{
   display: flex;
   float: left;
   margin-left: 2%;
   margin-top: 2%;
-  width: 13%;
+  width:13%;
 }
 
-.image {
+
+.image{
   display: flex;
   width: 62%;
   height: 100%;
@@ -78,49 +79,49 @@ form label {
   margin-top: 2%;
 }
 
-img {
+img{
   width: 200px;
 }
 
-textarea {
+textarea{
   height: 130px;
   width: 100%;
   margin-right: 2%;
 }
 
-select {
+select{
   height: 135px;
   width: 100%;
   margin-right: 2%;
 }
 
 @media screen and (max-width: 1366px) {
-  body p {
-    font-size: 30px;
+    body p{
+      font-size: 30px;
+    }
   }
-}
-
+  
 @media screen and (max-width: 1024px) {
-  body p {
+  body p{
     font-size: 20px;
   }
 }
 
 @media screen and (max-width: 768px) {
-  body p {
+  body p{
     font-size: 10px;
   }
 }
 
 @media screen and (max-width: 748px) {
-  body p {
+  body p{
     font-size: 8px;
   }
-  .weather {
+  .weather{
     display: flex;
     float: left;
     margin-left: 2%;
     margin-top: 2%;
-    width: 63.5%;
+    width:63.5%;
   }
 }
