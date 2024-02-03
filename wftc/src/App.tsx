@@ -1,6 +1,10 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import axios from "axios";
 import { FC, useState, useEffect } from "react";
+import DateTimePicker from "./component/DateTimePicker";
+import LocationSelect from "./component/LocationSelect";
+import WeatherTextarea from "./component/WeatherTextarea";
+import TrafficImages from "./component/TrafficImages";
 
 // Interface for the data returned by the server.
 interface AppProps {
@@ -233,63 +237,25 @@ const App: FC<AppProps> = ({ title }) => {
           <h3>{title}</h3>
         </div>
         <div>
-          <div className="datetime">
-            <label>Date</label>
-            <input
-              name="date"
-              type="date"
-              value={textValue1}
-              onChange={handleInputChange}
-              onSelect={handleInputSelect}
-            />
-          </div>
-          <div className="datetime">
-            <label>Time</label>
-            <input
-              name="time"
-              type="time"
-              value={textValue2}
-              onChange={handleInputChange}
-              onSelect={handleInputSelect}
-            />
-          </div>
+          <DateTimePicker
+            name="date"
+            value={textValue1}
+            onChange={handleInputChange}
+            onSelect={handleInputSelect}
+          />
+          <DateTimePicker
+            name="time"
+            value={textValue2}
+            onChange={handleInputChange}
+            onSelect={handleInputSelect}
+          />
         </div>
         <div>
-          <div className="locations">
-            <select name="locations" size={8} onChange={handleClick}>
-              return (
-              {area_metadata.map((area_metadata: any) => (
-                <option
-                  value={
-                    area_metadata.name +
-                    "-" +
-                    area_metadata.label_location.latitude +
-                    "-" +
-                    area_metadata.label_location.longitude
-                  }
-                >
-                  {" "}
-                  {area_metadata.name}
-                </option>
-              ))}
-              );
-            </select>
-          </div>
-          <div className="weather">
-            <textarea
-              name="weather"
-              readOnly
-              placeholder="Weather"
-              value={weather.map((weth: any) =>
-                weth.map((weth: { forecast: string }) => weth.forecast)
-              )}
-            />
-          </div>
+          <LocationSelect areaMetadata={area_metadata} onClick={handleClick} />
+          <WeatherTextarea weather={weather} />
         </div>
         <div>
-          <div className="image">
-            <div>{cameras}</div>
-          </div>
+          <TrafficImages cameras={cameras} />
         </div>
       </div>
     </form>

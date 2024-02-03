@@ -8,13 +8,13 @@
     - prettier
 
 ## Sourcecode 
-- git clone from https://github.com/ynitun/demos/tree/wftc
-- checkout wftc branch
+- git clone from https://github.com/ynitun/demos
+
 
 ## Quickstart Frontend
 
 1. Run `cd wftc`
-3. Run `npm install`
+2. Run `npm install`
 3. Run `npm start-dev`
 4. Go to `http://localhost:5173/`
 
@@ -49,6 +49,15 @@ Runs a script to prepare create environment configs and start the app in develop
 
 WFTC-API.postman_collection.json is included to provide postman information 
 
-## Things that haven't been covered
+##  Unit Test
 
-I haven't covered the unit test.
+# Frontend
+1. Run `cd wftc`
+2. Run `npm run test`
+
+# Backend
+
+1. Run `cd wftc-api`
+2. Run `npm test`
+
+
